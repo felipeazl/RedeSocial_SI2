@@ -20,21 +20,25 @@ function registerUser() {
   let email = document.getElementById("email");
   let password = document.getElementById("password");
 
-  let data = JSON.parse(localStorage.getItem("userData"));
+  if ((name.value == "") | (email.value == "") | (password.value == "")) {
+    alert("Todos os campos devem ser preenchidos para realizar o cadastro.");
+  } else {
+    let data = JSON.parse(localStorage.getItem("userData"));
 
-  if (data == null) {
-    localStorage.setItem("userData", "[]");
-    data = [];
+    if (data == null) {
+      localStorage.setItem("userData", "[]");
+      data = [];
+    }
+
+    const user = {
+      nome: name.value,
+      email: email.value,
+      senha: password.value,
+    };
+
+    data.push(user);
+
+    localStorage.setItem("userData", JSON.stringify(data));
+    alert("Usuário cadastrado. Realize o login para acessar o sistema.");
   }
-
-  const user = {
-    nome: name.value,
-    email: email.value,
-    senha: password.value,
-  };
-
-  data.push(user);
-
-  localStorage.setItem("userData", JSON.stringify(data));
-  alert("Usuário cadastrado. Realize o login para acessar o sistema.");
 }
