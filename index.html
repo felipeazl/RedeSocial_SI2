@@ -14,12 +14,12 @@
             <form class="form" id="login">
                 <h1 class="form__title">Login</h1>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" id="email-login" autofocus required placeholder="Email">
+                    <input type="text" class="form__input" id="userEmail" autofocus required placeholder="Email">
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" id="password-login" autofocus required placeholder="Senha">
+                    <input type="password" class="form__input" id="userPassword" autofocus required placeholder="Senha">
                 </div>
-                <button class="form__button" type="submit" onclick="userLogin()">Entrar</button>
+                <button class="form__button" id="login__btn" onclick="userLogin()">Entrar</button>
                 <p class="form__text">
                     <a class="form__link" href="./" id="linkRegister">Não tem uma conta? Registre-se.</a>
                 </p>
@@ -35,7 +35,7 @@
                 <div class="form__input-group">
                     <input type="password" id="password" class="form__input" autofocus required placeholder="Senha">
                 </div>
-                <button class="form__button" type="submit" onclick="registerUser()">Cadastrar</button>
+                <button class="form__button" onclick="registerUser()">Cadastrar</button>
                 <p class="form__text">
                     <a class="form__link" href="./" id="linkLogin">Já tem uma conta? Entrar.</a>
                 </p>
