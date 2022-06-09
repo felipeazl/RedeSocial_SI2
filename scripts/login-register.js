@@ -42,3 +42,29 @@ function registerUser() {
     alert("Usuário cadastrado. Realize o login para acessar o sistema.");
   }
 }
+
+//Ainda não está funcionando
+function userLogin() {
+  let login_email = document.getElementById("email-login");
+  let login_password = document.getElementById("password-login");
+
+  const user_login = {
+    email: login_email.value,
+    senha: login_password.value,
+  };
+
+  let storage = JSON.parse(localStorage.getItem("userData"));
+
+  storage.map((storageData) => {
+    for (var i = 0; i < localStorage.length; i++) {
+      if (
+        storageData.email === user_login.email &&
+        storageData.senha === user_login.senha
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  });
+}
