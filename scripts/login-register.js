@@ -68,15 +68,15 @@ function userLogin() {
     });
 
     if (email.value == userValid.email && password.value == userValid.senha) {
-      alert("funcionou");
-      window.location.href = "./pages/home.html";
-
       let token =
         Math.random().toString(16).substring(2) +
         Math.random().toString(16).substring(2);
 
       localStorage.setItem("token", token);
       localStorage.setItem("userLoged", JSON.stringify(userValid));
+
+      window.location.href = "/pages/home.html";
+      return false;
     } else {
       alert("Email ou senha não cadastrados.");
     }
