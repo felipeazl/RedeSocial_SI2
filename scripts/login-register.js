@@ -43,28 +43,42 @@ function registerUser() {
   }
 }
 
-//Ainda não está funcionando
 function userLogin() {
-  let login_email = document.getElementById("email-login");
-  let login_password = document.getElementById("password-login");
+  let email = document.getElementById("userEmail");
+  let password = document.getElementById("userPassword");
+  let userList = [];
 
-  const user_login = {
-    email: login_email.value,
-    senha: login_password.value,
+  let userValid = {
+    nome: "",
+    email: "",
+    senha: "",
   };
 
-  let storage = JSON.parse(localStorage.getItem("userData"));
+  userList = JSON.parse(localStorage.getItem("userData"));
 
-  storage.map((storageData) => {
-    for (var i = 0; i < localStorage.length; i++) {
-      if (
-        storageData.email === user_login.email &&
-        storageData.senha === user_login.senha
-      ) {
-        return true;
-      } else {
-        return false;
+  if (email.value != "" && password.value != "") {
+    userList.forEach((item) => {
+      if (email.value == item.email && password.value == item.senha) {
+        userValid = {
+          nome: item.nome,
+          email: item.email,
+          senha: item.senha,
+        };
       }
+    });
+
+    if (email.value == userValid.email && password.value == userValid.senha) {
+      let token =
+        Math.random().toString(16).substring(2) +
+        Math.random().toString(16).substring(2);
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("userLoged", JSON.stringify(userValid));
+
+      window.location.href = "/pages/home.html";
+      return false;
+    } else {
+      alert("Email ou senha não cadastrados.");
     }
-  });
+  }
 }

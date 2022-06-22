@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Social Universitaria</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/login-register.css">
+    <script src="./scripts/login-register.js" defer></script>
+</head>
+<body>
+    <div class="login-register__page">
+        <div class="container">
+            <form class="form" id="login" onsubmit="return userLogin()">
+                <h1 class="form__title">Login</h1>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id="userEmail" autofocus required placeholder="Email">
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" id="userPassword" autofocus required placeholder="Senha">
+                </div>
+                <button class="form__button" type="submit">Entrar</button>
+                <p class="form__text">
+                    <a class="form__link" id="linkRegister">Não tem uma conta? Registre-se.</a>
+                </p>
+            </form>
+            <form class="form form--hidden" id="register" onsubmit="return registerUser()">
+                <h1 class="form__title">Criar Conta</h1>
+                <div class="form__input-group">
+                    <input type="text" id="name" class="form__input" autofocus required placeholder="Nome">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" id="email" class="form__input" autofocus required placeholder="Email">
+                </div>
+                <div class="form__input-group">
+                    <input type="password" id="password" class="form__input" autofocus required placeholder="Senha">
+                </div>
+                <button class="form__button" type="submit">Cadastrar</button>
+                <p class="form__text">
+                    <a class="form__link" id="linkLogin">Já tem uma conta? Entrar.</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
