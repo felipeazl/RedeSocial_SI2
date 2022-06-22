@@ -19,7 +19,9 @@
 .container,
 .form__input,
 .form__button {
-  font: 500 1rem "Quicksand", sans-serif;
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  border: 1px solid black;
 }
 
 .form--hidden {
@@ -37,6 +39,7 @@
 .form__title {
   margin-bottom: 2rem;
   text-align: center;
+  font-family: var(--font-logo);
 }
 
 .form__input-group {
@@ -86,7 +89,7 @@
 }
 
 .form__link {
-  color: var(--color-secondary);
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
