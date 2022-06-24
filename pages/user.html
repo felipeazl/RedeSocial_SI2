@@ -11,11 +11,14 @@
 </head>
 <body>
     <div class="login-register__page">
+        <div class="image-container">
+            <img src="../images/logo.svg" alt="Stuny">
+        </div>
         <div class="container">
             <form class="form" id="login" onsubmit="return userLogin()">
-                <h1 class="form__title">Entrar no Stuny</h1>
+                <h1 class="form__title">Entrar no <span class="span">Stuny</span></h1>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" id="userEmail" autofocus required placeholder="Email">
+                    <input type="email" class="form__input" id="userEmail" autofocus required placeholder="Email">
                 </div>
                 <div class="form__input-group">
                     <input type="password" class="form__input" id="userPassword" autofocus required placeholder="Senha">
@@ -26,15 +29,24 @@
                 </p>
             </form>
             <form class="form form--hidden" id="register" onsubmit="return registerUser()">
-                <h1 class="form__title">Criar Conta</h1>
+                <h1 class="form__title">Criar Conta no <span class="span">Stuny</span></h1>
                 <div class="form__input-group">
-                    <input type="text" id="name" class="form__input" autofocus required placeholder="Nome">
+                    <input type="text" id="name" class="form__input" autofocus required placeholder="Nome Completo">
                 </div>
                 <div class="form__input-group">
-                    <input type="text" id="email" class="form__input" autofocus required placeholder="Email">
+                    <input type="email" id="email" class="form__input" autofocus required placeholder="Email">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" id="faculdade" class="form__input" autofocus required placeholder="Faculdade">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" id="curso" class="form__input" autofocus required placeholder="Curso">
                 </div>
                 <div class="form__input-group">
                     <input type="password" id="password" class="form__input" autofocus required placeholder="Senha">
+                </div>
+                <div class="form__input-group">
+                    <input type="password" id="confirm-password" class="form__input" autofocus required placeholder="Confirmar Senha">
                 </div>
                 <button class="form__button" type="submit">Cadastrar</button>
                 <p class="form__text">
