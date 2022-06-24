@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Roboto&display=swap");
 
 body {
   --color-primary: #293445;
-  --color-primary-dark: #3F4754;
-  --color-secondary: #2F7B86;
+  --color-primary-dark: #3f4754;
+  --color-secondary: #2f7b86;
+  --color-green: #238636;
+  --color-dark-green: #155321;
 
   --border-radius: 15px;
   --shadow: 0px 0px 15px 5px #00000040;
 
-  --font-logo: 'Graduate', cursive;
-  --font-roboto: 'Roboto', sans-serif;
+  --font-logo: "Graduate", cursive;
+  --font-roboto: "Roboto", sans-serif;
+  --text-stroke: -1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000,
+    1px 0px 0px #000;
 
-  
   color: white;
   background-color: var(--color-primary);
   margin: 0;
