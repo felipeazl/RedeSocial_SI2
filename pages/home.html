@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <script src="../scripts/home.js" defer></script>
     <title>Stuny</title>
 </head>
 <body>
@@ -30,46 +29,38 @@
                     <img class="avatar__image" src="../images/avatar.png" />
                 </div>
                 <div class="card_information">
-                    <h2>Felipe Kucharski</h2>
-                    <p><b>Universidade: </b> Universidade Federal do Rio Grande - FURG</p>
-                    <p><b>Curso: </b>Sistemas de Informação</p>
+                    <h2 class="text" id="nome"></h2>
+                    <p class="text"><b>Universidade: </b><span id="universidade"></span></p>
+                    <p class="text"><b>Curso: </b><span id="curso"></span></p>
                 </div>
             </div>
             <div class="contacts">
                 <div class="contacts_line">
                     <img src="../images/icon_email.svg" />
-                    <p>exemplo@e-mail.com</p>
+                    <p class="social_media" id="email"></p>
                 </div>
                 <div class="contacts_line">
                     <img src="../images/icon_linkedin.svg" />
-                    <p>linkedin.com/exemplo</p>
+                    <p class="social_media">linkedin.com/exemplo</p>
                 </div>
                 <div class="contacts_line">
                     <img src="../images/icon_github.svg" />
-                    <p>github.com/exemplo</p>
+                    <p class="social_media">github.com/exemplo</p>
                 </div>
             </div>
         </aside>
     
         <!-- Main -->
-        <main class="container__main">
-            <div class="card">
+        <main id="dinamic_card" class="container__main">
+            <div class="card_input">
                 <!-- Cover -->
                 <div class="card__cover">
-                    <div class="card_head">
-                        <div class="card_avatar">
-                            <!-- Avatar image -->
-                            <img class="avatar__image" src="../images/avatar.png" />
-                        </div>
-                        <div class="card_information">
-                            <h3>Felipe Kucharski</h3>
-                            <p>12h</p>
+                    <div class="card_head_input">
+                        <div class="input_area">    
+                            <textarea type="text" placeholder="Adicione a sua postagem aqui." id="post" rows="3" cols="50"></textarea>
+                            <button onclick="addPost()">Publicar</button>
                         </div>
                     </div>
-                </div>
-                <!-- Content -->
-                <div class="card__content">
-                   ...
                 </div>
             </div>
 
@@ -92,9 +83,28 @@
                    ...
                 </div>
             </div>
+
+            <div class="card">
+                <!-- Cover -->
+                <div class="card__cover">
+                    <div class="card_head">
+                        <div class="card_avatar">
+                            <!-- Avatar image -->
+                            <img class="avatar__image" src="../images/avatar.png" />
+                        </div>
+                        <div class="card_information">
+                            <h3>Felipe Kucharski</h3>
+                            <p>12h</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content -->
+                <div class="card__content">
+                   ...
+                </div>
+            </div>
         </main>
     </div>
 </body>
-<script>
-</script>
+<script src="../scripts/home.js"></script>
 </html>

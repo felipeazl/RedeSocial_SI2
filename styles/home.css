@@ -51,6 +51,7 @@
 
 .container__sidebar {
   width: 30%;
+  max-height: 40vh;
   padding: 2%;
   margin: 0% 1% 0% 2%;
   background-color: var(--color-primary-dark);
@@ -82,10 +83,9 @@
   box-shadow: var(--shadow);
 }
 
-.card__cover {
-  height: 150px;
-  width: 100%;
-}
+/* .card__cover {
+  /* height: 150px;
+  width: 100%; */
 
 .card__content {
   /* Take available height */
@@ -115,4 +115,59 @@
   justify-content: baseline;
   font-family: var(--font-logo);
   font-size: 12px;
+}
+
+.social_media {
+  font-size: 1rem;
+}
+.text {
+  font-size: 0.8rem;
+}
+
+.card_head_input {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-logo);
+  font-size: 12px;
+}
+.card_input {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+  border-radius: var(--border-radius);
+  padding: 2%;
+  background-color: var(--color-primary);
+  margin-bottom: 2%;
+  box-shadow: var(--shadow);
+}
+.input_area {
+  display: flex;
+  flex-direction: column;
+}
+.input_area textarea {
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary-dark);
+  outline: none;
+  background: var(--color-primary-dark);
+  transition: background 0.2s, border-color 0.2s;
+  color: white;
+  font-family: var(--font-roboto);
+}
+.input_area button {
+  align-self: center;
+  margin-top: 2%;
+  width: 25%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  cursor: pointer;
+  background: var(--color-secondary);
+}
+.input_area button:hover {
+  background: #1d4c53;
 }
