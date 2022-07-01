@@ -41,4 +41,46 @@ function addPost() {
   localStorage.setItem("post", JSON.stringify(data));
 
   publicacao.value = "";
+  showPosts();
+}
+
+function showPosts() {
+  let card = document.querySelector("#dinamic_card");
+  let post_storage = JSON.parse(localStorage.getItem("post")) || [];
+
+  dinamic_card.innerHTML = "";
+
+  post_storage.forEach((item) => {
+    const content = document.createElement("div");
+    const pos = post_storage.indexOf(item);
+
+    content.innerHTML = ` <div class="card">
+      <div class="card__cover">
+        <div class="card_head">
+          <div class="card_avatar">
+            <img class="avatar__image" src="../images/avatar.png" />
+          </div>
+          <div class="card_information">
+            <h3 id="post-name">${item.nome}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card__content">
+        <p id="post-message">${item.publicacao}</p>
+        <div class="card__menu">
+          <i class="fa fa-heart" aria-hidden="true" ></i>
+          <button class="remove-btn" onClick="removePost(${pos})">Deletar</button>
+        </div>
+      </div>
+    </div>`;
+
+    dinamic_card.appendChild(content);
+  });
+}
+
+function removePost(pos) {
+  let post_storage = JSON.parse(localStorage.getItem("post")) || [];
+  post_storage.splice(pos, 1);
+  localStorage.setItem("post", JSON.stringify(post_storage));
+  showPosts();
 }

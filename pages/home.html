@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <script src="../scripts/home.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"/>
     <title>Stuny</title>
 </head>
-<body>
+<body onload="showPosts()">
 
     <div class="nav">
         <div class="nav_logo">
@@ -51,7 +53,7 @@
         </aside>
     
         <!-- Main -->
-        <main id="dinamic_card" class="container__main">
+        <main class="container__main">
             <div class="card_input">
                 <!-- Cover -->
                 <div class="card__cover">
@@ -64,47 +66,10 @@
                 </div>
             </div>
 
-            <div class="card">
-                <!-- Cover -->
-                <div class="card__cover">
-                    <div class="card_head">
-                        <div class="card_avatar">
-                            <!-- Avatar image -->
-                            <img class="avatar__image" src="../images/avatar.png" />
-                        </div>
-                        <div class="card_information">
-                            <h3>Felipe Louzada</h3>
-                            <p>18h</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Content -->
-                <div class="card__content">
-                   ...
-                </div>
-            </div>
+            <div id="dinamic_card">
 
-            <div class="card">
-                <!-- Cover -->
-                <div class="card__cover">
-                    <div class="card_head">
-                        <div class="card_avatar">
-                            <!-- Avatar image -->
-                            <img class="avatar__image" src="../images/avatar.png" />
-                        </div>
-                        <div class="card_information">
-                            <h3>Felipe Kucharski</h3>
-                            <p>12h</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Content -->
-                <div class="card__content">
-                   ...
-                </div>
             </div>
         </main>
     </div>
 </body>
-<script src="../scripts/home.js"></script>
 </html>

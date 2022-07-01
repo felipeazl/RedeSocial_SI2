@@ -171,3 +171,39 @@
 .input_area button:hover {
   background: #1d4c53;
 }
+#post-message {
+  font-family: var(--font-roboto);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+.card__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.remove-btn {
+  align-self: center;
+  margin-top: 2%;
+  width: 15%;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-family: var(--font-roboto);
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  cursor: pointer;
+  background: var(--color-red);
+}
+
+i {
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 4%;
+}
+i:hover {
+  color: var(--color-red);
+}
