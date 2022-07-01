@@ -13,7 +13,7 @@
 }
 
 .nav .nav_buton {
-  font-size: 16px;
+  font-size: 1rem;
   margin-right: 2%;
 }
 .nav .nav_buton button {
@@ -161,6 +161,7 @@
 }
 #post-message {
   font-family: var(--font-roboto);
+  word-break: break-word;
 }
 
 .card__content {
@@ -186,12 +187,81 @@
   background: var(--color-red);
 }
 
+.like-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin-top: 4%;
+  cursor: pointer;
+}
+.liked,
+.like-btn:hover {
+  color: var(--color-red);
+}
+
 i {
   font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-  margin-top: 4%;
 }
-i:hover {
-  color: var(--color-red);
+.accordion,
+.accordion span,
+.panel,
+.active {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container__sidebar {
+    display: none;
+  }
+  .input_area button {
+    width: 30%;
+  }
+  .remove-btn {
+    width: 25%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container__main {
+    margin-top: 2%;
+  }
+
+  .accordion {
+    display: inherit;
+    background-color: var(--color-primary);
+    font-family: var(--font-roboto);
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  .accordion span {
+    font-family: var(--font-logo);
+    display: inherit;
+  }
+  #universidade-mobile,
+  #curso-mobile {
+    font-family: var(--font-logo);
+    display: inherit;
+  }
+  .active,
+  .accordion:hover {
+    background-color: var(--color-primary);
+    display: inherit;
+  }
+  .panel {
+    display: inherit;
+    font-family: var(--font-roboto);
+    font-size: 1rem;
+    padding: 0 18px;
+    background-color: var(--color-primary-dark);
+    display: none;
+    overflow: hidden;
+  }
 }

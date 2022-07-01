@@ -3,7 +3,7 @@
 - Para funcionar corretamente recomendamos utilizar o LocalServer para rodar o projeto.
 - Caso execute o HTML diretamente da pasta os redirecionamentos podem não funcionar por causa dos caminhos.
 
-## Menbros do Grupo
+# Menbros do Grupo
 
 - Alipio Neto (140653).
 - Felipe Kucharski (140643).

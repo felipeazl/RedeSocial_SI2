@@ -113,3 +113,9 @@
 .span {
   font-family: var(--font-logo);
 }
+
+@media (max-width: 767px) {
+  .container {
+    width: 90vw;
+  }
+}

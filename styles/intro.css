@@ -62,3 +62,26 @@ header a:hover {
   font-family: var(--font-logo);
   color: var(--color-secondary);
 }
+
+@media (max-width: 768px) {
+  header img {
+    width: 30%;
+    margin: 2% 0 0 3%;
+  }
+  header a {
+    margin: 2% 3% 0 0;
+  }
+  .intro-container img {
+    width: 50%;
+  }
+  .intro-container h1 {
+    font-size: 1.8rem;
+  }
+  .message {
+    width: 80%;
+    padding: 2%;
+  }
+  .message p {
+    font-size: 1.4rem;
+  }
+}
