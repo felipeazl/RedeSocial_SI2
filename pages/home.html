@@ -8,27 +8,23 @@
     <link rel="stylesheet" href="../styles/main.css">
     <script src="../scripts/home.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"/>
-    <title>Stuny</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
+    <title>Stuny - Home</title>
 </head>
 <body onload="showPosts()">
-
     <div class="nav">
         <div class="nav_logo">
-            <img src="../images/logo_tittle.png">
+            <img alt="stuny" src="../images/logo_tittle.png">
         </div>
-
         <div class="nav_buton">
             <button onclick="Logout()">SAIR</button>
         </div>
     </div>
-
     <div class="container">
-        <!-- Sidebar -->
         <aside class="container__sidebar">
             <div class="card_head">
                 <div class="card_avatar">
-                    <!-- Avatar image -->
-                    <img class="avatar__image" src="../images/avatar.png" />
+                    <img alt="user" class="avatar__image" src="../images/avatar.png" />
                 </div>
                 <div class="card_information">
                     <h2 class="text" id="nome"></h2>
@@ -38,24 +34,21 @@
             </div>
             <div class="contacts">
                 <div class="contacts_line">
-                    <img src="../images/icon_email.svg" />
+                    <img alt="email-logo" src="../images/icon_email.svg" />
                     <p class="social_media" id="email"></p>
                 </div>
                 <div class="contacts_line">
-                    <img src="../images/icon_linkedin.svg" />
+                    <img alt="linkedin-logo" src="../images/icon_linkedin.svg" />
                     <p class="social_media">linkedin.com/exemplo</p>
                 </div>
                 <div class="contacts_line">
-                    <img src="../images/icon_github.svg" />
+                    <img alt="github-logo" src="../images/icon_github.svg" />
                     <p class="social_media">github.com/exemplo</p>
                 </div>
             </div>
         </aside>
-    
-        <!-- Main -->
         <main class="container__main">
             <div class="card_input">
-                <!-- Cover -->
                 <div class="card__cover">
                     <div class="card_head_input">
                         <div class="input_area">    
@@ -65,10 +58,7 @@
                     </div>
                 </div>
             </div>
-
-            <div id="dinamic_card">
-
-            </div>
+            <div id="dinamic_card"></div>
         </main>
     </div>
 </body>

@@ -60,10 +60,7 @@
 }
 
 .container__main {
-  /* Take the remaining width */
   flex: 1;
-
-  /* Make it scrollable */
   overflow: auto;
   background-color: var(--color-primary-dark);
   padding: 2%;
@@ -83,27 +80,18 @@
   box-shadow: var(--shadow);
 }
 
-/* .card__cover {
-  /* height: 150px;
-  width: 100%; */
-
 .card__content {
-  /* Take available height */
   flex: 1;
 }
 
 .card_avatar {
-  /* Rounded border */
   border-radius: 50%;
   height: 56px;
   width: 56px;
 }
 
 .avatar__image {
-  /* Rounded border */
   border-radius: 50%;
-
-  /* Take full size */
   height: 100%;
   width: 100%;
 }
